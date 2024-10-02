@@ -27,7 +27,7 @@ Para ejecutar este proyecto, necesitarás lo siguiente:
 Clona este repositorio desde GitHub en tu máquina local:
 
 ```bash
-git clone https://github.com/tuusuario/discogs-backend-challenge.git
+git clone https://github.com/J-Soto/discogs-backend-challenge.git
 cd discogs-backend-challenge
 ```
 
