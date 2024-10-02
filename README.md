@@ -52,7 +52,7 @@ Crea una base de datos nueva:
 
 ```bash
 psql -U postgres
-CREATE DATABASE discogsdb;
+CREATE DATABASE YOUR_SCHEMA;
 ```
 
 Configura tu usuario y contraseña en el archivo `application.properties` (como se muestra arriba).
@@ -61,9 +61,9 @@ Configura tu usuario y contraseña en el archivo `application.properties` (como 
 Si prefieres usar MySQL, la configuración es similar, solo debes ajustar la URL de conexión:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/discogsdb
-spring.datasource.username=your_db_user
-spring.datasource.password=your_db_password
+spring.datasource.url=jdbc:mysql://localhost:3306/YOUR_SCHEMA
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
 ```
 
 ### 4. Construcción y Ejecución del Proyecto
