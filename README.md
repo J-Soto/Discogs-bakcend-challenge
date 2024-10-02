@@ -10,7 +10,6 @@ Este proyecto implementa una API para buscar y comparar artistas musicales utili
 - [Ejecución del Proyecto](#ejecución-del-proyecto)
 - [API Endpoints](#api-endpoints)
 - [Pruebas Unitarias](#pruebas-unitarias)
-- [Análisis de Calidad del Código](#análisis-de-calidad-del-código)
 - [Consideraciones Finales](#consideraciones-finales)
 
 ## Requisitos
