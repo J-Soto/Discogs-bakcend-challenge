@@ -53,11 +53,11 @@ public class DiscogsApiService {
         try {
             DiscogsArtistResponse response = restTemplate.getForObject(url, DiscogsArtistResponse.class);
             if (response == null || response.getResults().isEmpty()) {
-                throw new DiscogsApiException("No se encontraron resultados para el artista.", HttpStatus.NOT_FOUND);
+                throw new DiscogsApiException("No results found for the artist.", HttpStatus.NOT_FOUND);
             }
             return response.getResults().get(0).getId();
         } catch (RestClientException e) {
-            throw new DiscogsApiException("Error al comunicar con la API de Discogs.", HttpStatus.INTERNAL_SERVER_ERROR, e);
+            throw new DiscogsApiException("Error communicating with Discogs API", HttpStatus.INTERNAL_SERVER_ERROR, e);
         }
     }
 
@@ -73,11 +73,11 @@ public class DiscogsApiService {
         try {
             ArtistDTO artist = restTemplate.getForObject(url, ArtistDTO.class);
             if (artist == null) {
-                throw new DiscogsApiException("Detalles del artista no encontrados.", HttpStatus.NOT_FOUND);
+                throw new DiscogsApiException("Artist details not found.", HttpStatus.NOT_FOUND);
             }
             return artist;
         } catch (RestClientException e) {
-            throw new DiscogsApiException("Error al comunicar con la API de Discogs.", HttpStatus.INTERNAL_SERVER_ERROR, e);
+            throw new DiscogsApiException("Error communicating with Discogs API", HttpStatus.INTERNAL_SERVER_ERROR, e);
         }
     }
 
@@ -94,7 +94,7 @@ public class DiscogsApiService {
             DiscogsMastersResponse response = restTemplate.getForObject(url, DiscogsMastersResponse.class);
             return response != null ? response.getResults() : List.of();
         } catch (RestClientException e) {
-            throw new DiscogsApiException("Error al comunicar con la API de Discogs.", HttpStatus.INTERNAL_SERVER_ERROR, e);
+            throw new DiscogsApiException("Error communicating with Discogs API", HttpStatus.INTERNAL_SERVER_ERROR, e);
         }
     }
 
@@ -111,7 +111,7 @@ public class DiscogsApiService {
             DiscogsReleasesResponse response = restTemplate.getForObject(url, DiscogsReleasesResponse.class);
             return response != null ? response.getResults() : List.of();
         } catch (RestClientException e) {
-            throw new DiscogsApiException("Error al comunicar con la API de Discogs.", HttpStatus.INTERNAL_SERVER_ERROR, e);
+            throw new DiscogsApiException("Error communicating with Discogs API", HttpStatus.INTERNAL_SERVER_ERROR, e);
         }
     }
 }
